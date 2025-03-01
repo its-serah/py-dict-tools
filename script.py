@@ -26,3 +26,11 @@ def merge_dictionaries (class1_info,class2_info):
         class3_info[key] = class2_info[key]  
 
     return class3_info   
+
+
+#Dictonaries Generator Function
+
+def generate_dictionaries ():
+    print("Welcome To Dictionaries Generater Where We Generate Dictionaries From Your Sentences!")
+    sentence = input("Please enter a full english sentence")
+    
