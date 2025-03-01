@@ -63,3 +63,31 @@ def generate_dictionaries ():
     return result
 
 
+#Function storing information about employees
+
+def company_management():
+    # Dictionary storing employee information
+    company_employees = {
+        "Engineering": {
+            "Alice": {"age": 30, "role": "Software Engineer"},
+            "Bob": {"age": 28, "role": "DevOps Engineer"}
+        },
+        "HR": {
+            "Charlie": {"age": 35, "role": "HR Manager"}
+        }
+    }
+    print(company_employees)
+
+    # Adding a new Employee
+    company_employees.setdefault("Engineering", {})["David"] = {"age": 27, "role": "Data Scientist"}
+    print(company_employees)
+
+    # Nested function to count total employees
+    def count_total_employees():
+        total = sum(len(department) for department in company_employees.values())
+        return total
+
+    print(count_total_employees())
+
+
+
