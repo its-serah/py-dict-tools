@@ -90,4 +90,15 @@ def company_management():
     print(count_total_employees())
 
 
+# Function to invert a dictionary where values become keys and keys become a list of values
+def invert_dictionary(original_dict):
+    inverted_dict = {}  
 
+    # Loop through the original dictionary
+    for key, value in original_dict.items():
+        if value in inverted_dict:
+            inverted_dict[value].append(key)  
+        else:
+            inverted_dict[value] = [key] 
+
+    return inverted_dict  
